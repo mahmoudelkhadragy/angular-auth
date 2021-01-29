@@ -1,0 +1,18 @@
+<h2 class="text-center mt-2">Special Events</h2>
+<div class="text-center mt-5" *ngIf="isFeatching">
+  <app-loading></app-loading>
+</div>
+<div class="row mt-4">
+  <div class="col-12 col-md-4 mb-4" *ngFor="let specialEvent of specialEvents">
+    <div>
+      <div class="box text-center">
+        <h5 class="card-title mt-2">{{ specialEvent.name }}</h5>
+        <p class="card-text mb-1">{{ specialEvent.description }}</p>
+        <div class="text-muted mb-2">
+          {{ specialEvent.date | date: "shortDate" }}
+        </div>
+        <a class="btn btn-primary btn-sm my-2">Buy Tickets</a>
+      </div>
+    </div>
+  </div>
+</div>
